@@ -2,7 +2,7 @@ from flask import Blueprint, request, jsonify, current_app
 from bson import ObjectId
 import csv
 
-# Create a Blueprint
+
 routes_blueprint = Blueprint("routes", __name__)
 
 
@@ -16,7 +16,7 @@ def upload_csv():
         return jsonify({"error": "No selected file"}), 400
 
     if file and file.filename.endswith(".csv"):
-        # Read the CSV file
+
         csv_data = csv.DictReader(file.read().decode("utf-8").splitlines())
         movies = []
         for row in csv_data:

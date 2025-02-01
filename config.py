@@ -11,4 +11,4 @@ class Config:
 
     # Flask configuration
     SECRET_KEY = os.getenv("SECRET_KEY", "my-secret-key")
-    DEBUG = os.getenv("DEBUG", "True") == "True"  # Convert string to boolean
+    DEBUG = os.getenv("DEBUG", "True") == "True"
